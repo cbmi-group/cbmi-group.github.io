@@ -1,12 +1,3 @@
-<!-- <div class="toc">
-
-<ul>
-  <li><a href="#Prof-Yang" "Prof Yang">Prof Yang</a></li>
-  <li><a href="#Prof-Li" "Prof Li">Prof Li</a></li>
-</ul>
-
-</div>
- -->
 
 <div class="row" id="Prof-Yang">
   <div class="2u">
