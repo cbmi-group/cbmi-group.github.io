@@ -1,7 +1,7 @@
 
 <div class="row" id="myh">
   <div class="2u">
-    <img src="../images/xyp.jpg" alt="" width="100%">
+    <img src="../images/xyp.jpeg" alt="" width="100%">
    </div>
 </div>
 
