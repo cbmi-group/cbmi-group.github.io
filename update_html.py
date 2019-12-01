@@ -28,7 +28,6 @@ def savefinalhtml(filepath, finalhtml):
 index = load_utf8("index_template.html")
 banner = load_utf8("banner_template.html")
 u8u4 = load_utf8("8u-4u.html")
-photo = load_utf8("labphoto.html")
 personal = load_utf8("people/personal_template.html")
 
 # siteMap = load_utf8("templates/sitemap.tm.xml")
@@ -60,7 +59,7 @@ savefinalhtml("people.html", pub)
 
 
 def generate_a_person(mdpath, pagetitle, htmlpath):
-    pub = personal.replace("{{TITLE}}", "Personal Homepage")
+    pub = personal.replace("{{TITLE}}", pagetitle)
     pub_tem = load_utf8("style2_template.html")
     publications = load_utf8(mdpath)
     publications = markdown.markdown(publications)
@@ -88,7 +87,6 @@ person_infos = [
 ]
 
 # generate personal homepage.
-
 for a_person in person_infos:
     generate_a_person(a_person[0], a_person[1], a_person[2])
 
