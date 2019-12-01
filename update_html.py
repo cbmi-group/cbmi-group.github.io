@@ -39,7 +39,7 @@ index_body = index_body + banner + u8u4
 
 news = [
   ["images/feng3-p5-feng-large.gif", "Quality Assessment of Synthetic Fluorescence Microscopy Images for Image Segmentation", "We have developed a method to assess quality of synthetic fluorescence microscopy images and to evaluate their training performance in image segmentation.", "https://ieeexplore.ieee.org/abstract/document/8802971"],
-  ["videos/mmc6.mp4", "Whole-Cell Scale Dynamic Organization of Lysosomes Revealed by Spatial Statistical Analysis", "Our findings reveal whole-cell scale spatial organization of lysosomes and provide insights into how organelle interactions are mediated and regulated across the entire intracellular space.", "https://www.sciencedirect.com/science/article/pii/S221112471830860X"]
+  ["https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.mp4", "Whole-Cell Scale Dynamic Organization of Lysosomes Revealed by Spatial Statistical Analysis", "Our findings reveal whole-cell scale spatial organization of lysosomes and provide insights into how organelle interactions are mediated and regulated across the entire intracellular space.", "https://www.sciencedirect.com/science/article/pii/S221112471830860X", "https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.jpg"]
 ]
 news_template = load_utf8("news_template.html")
 a_new = news_template.replace("{{IMG_URL}}", news[0][0])
@@ -52,6 +52,8 @@ b_new = video_template.replace("{{VIDEO_URL}}", news[1][0])
 b_new = b_new.replace("{{RESEARCH_TITLE}}", news[1][1])
 b_new = b_new.replace("{{RESEARCH_BRIEF}}", news[1][2])
 b_new = b_new.replace("{{RESEARCH_LINK}}", news[1][3])
+b_new = b_new.replace("{{VIDEO_IMG}}", news[1][4])
+
 
 a_row = load_utf8("row_template.html")
 
