@@ -921,7 +921,7 @@
 		#header nav {
 			height: inherit;
 			line-height: inherit;
-			position: absolute;
+			position: fixed;
 			right: 1.25em;
 			top: 0;
 			vertical-align: middle;
@@ -1105,3 +1105,8 @@
 		  z-index: 0;
 		  background-color: rgba(16, 53, 81, 0.8);
 		}
+
+/*row photo--*/
+        .row-photo{
+        	display:inline;
+        }

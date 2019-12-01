@@ -1,12 +1,18 @@
 
 <div class="row" id="Prof-Li">
   <div class="2u">
-    <img src="images/lwj.jpg" alt="Prof. Wenjing Li" width="100%">
-    <center>Wenjing Li, Ph.D.</center>
-  </div>
+    <img src="../images/lwj.jpg" alt="Prof. Wenjing Li" width="100%">
+   </div>
 </div>
 
-### Biography
+###Wenjing Li
+- Ph.D Associate Assistant.
+- National Laboratory of Pattern Recongition (NLRR)，Institute of Automation,Chinese Academy of Sciences
+- Email: wenjing.li@ia.ac.cn
+<hr>
+
+
+### Academic Background
 - **Associate professor**, Institute of Automation Chinese Academy of Sciences, Apr.2019-
 - **Postdoctoral fellow**, School of Life Sciences, Tsinghua University, China, Dec.2013-Dec.2017
 - **Research assistant**, The Institute of Biophysics of the Chinese Academy of Sciences, Oct.2012-Dec.2013
