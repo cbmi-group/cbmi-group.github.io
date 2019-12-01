@@ -68,17 +68,16 @@ pub_tem = load_utf8("style2_template.html")
 publications = load_utf8("md/research.md")
 publications = markdown.markdown(publications)
 pub_content = pub_tem.replace("{{POST_TITLE}}", "Research Projects")
-pub_content = pub_content.replace("{{POST_CONTENT}}", publications)
+research_row = load_utf8("a_project_row.html")
+pub_content = pub_content.replace("{{POST_CONTENT}}", publications + research_row.replace("{{INNER}}", a_new.replace('"4u"', '"6u"') + b_new.replace('"4u"', '"6u"')))
 pub = pub.replace("{{BODY}}", pub_content)
 savefinalhtml("research.html", pub)
-
 
 # generate people
 pub = index.replace("{{TITLE}}", "Team")
 my_people = load_utf8("md/people_template.html")
 pub = pub.replace("{{BODY}}", my_people)
 savefinalhtml("people.html", pub)
-
 
 def generate_a_person(mdpath, pagetitle, htmlpath):
     pub = personal.replace("{{TITLE}}", pagetitle)
