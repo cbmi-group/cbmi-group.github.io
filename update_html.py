@@ -95,6 +95,7 @@ person_infos = [
   ["md/lwj.md",    "Wenjing",       "people/wenjingli.html"],
   ["md/gyh.md",    "Yuanhao Guo",   "people/yuanhaoguo.html"],
   ["md/jay.md",    "Jie Jin",       "people/jay.html"],
+  ["md/yp.md",     "Ping Yang",     "people/pingyang.html"],
   ["md/mxy.md",    "Xiangyuan Mei", "people/xiangyuanmei.html"],
   ["md/lgl.md",    "Guole Liu",     "people/guoleliu.html"],
   ["md/zsh.md",    "Shuhao Zhang",  "people/shuhaozhang.html"],
