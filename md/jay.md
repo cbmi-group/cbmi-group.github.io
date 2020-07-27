@@ -7,7 +7,7 @@
 
 ###Jie Jin
 - Software Engineer.
-- National Laboratory of Pattern Recongition (NLRR)
+- National Laboratory of Pattern Recongition (NLPR)
 - Institute of Automation,Chinese Academy of Sciences
 - Email: jinjie2015@ia.ac.cn
 <hr>

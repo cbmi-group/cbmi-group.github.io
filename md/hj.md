@@ -1,19 +1,21 @@
 
-<div class="row" id="zyf">
+<div class="row" id="hj">
   <div class="2u">
-    <img src="../images/zyf.png" alt="" width="100%">
+    <img src="../images/hj.jpg" alt="" width="100%">
    </div>
 </div>
 
-### Yanfeng Zhou
+### Jia He
 - 2020 PhD Student
 - National Laboratory of Pattern Recongition (NLPR)
 - Institute of Automation,Chinese Academy of Sciences
-- Email: zhouyanfeng2020@ia.ac.cn
+- Email: hejia2020@ia.ac.cn
 <hr>
 
 
 ### Research Interests
+
+Computer Vision，Explainable Artificial Intelligence，Neuroscience
 
 ### PUBLICATIONS
 

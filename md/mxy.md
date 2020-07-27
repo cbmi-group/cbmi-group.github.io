@@ -7,7 +7,7 @@
 
 ###Xiangyuan Mei
 - Laboratory Assistant.
-- National Laboratory of Pattern Recongition (NLRR)
+- National Laboratory of Pattern Recongition (NLPR)
 - Institute of Automation,Chinese Academy of Sciences
 - Phone: 010-82544482.
 - Email:xiangyuan.mei@nlpr.ia.ac.cn

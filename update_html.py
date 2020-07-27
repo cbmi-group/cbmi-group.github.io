@@ -106,6 +106,9 @@ person_infos = [
   ["md/wsy.md",    "Shiyu Wu",      "people/shiyuwu.html"],
   ["md/zyt.md",    "Yating Zhou",   "people/yatingzhou.html"],
   ["md/zyf.md",    "Yanfeng Zhou",  "people/yanfengzhou.html"],
+  ["md/qmx.md",    "Mengxuan Qiu",  "people/mengxuanqiu.html"],
+  ["md/zyd.md",    "Yudong Zhang",  "people/yudongzhang.html"],
+  ["md/hj.md",     "Jia He",        "people/jiahe.html"],
 ]
 
 # generate personal homepage.

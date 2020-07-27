@@ -7,7 +7,7 @@
 
 ###Yuanhao Guo
 - Ph.D Assistant
-- National Laboratory of Pattern Recongition (NLRR)，Institute of Automation,Chinese Academy of Sciences
+- National Laboratory of Pattern Recongition (NLPR)，Institute of Automation,Chinese Academy of Sciences
 - Email: yuanhao.guo@ia.ac.cn
 <hr>
 

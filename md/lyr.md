@@ -7,7 +7,7 @@
 
 ###Yaoru Luo（罗曜儒）
 - 2019 PhD Student.
-- National Laboratory of Pattern Recongition (NLRR)
+- National Laboratory of Pattern Recongition (NLPR)
 - Institute of Automation,Chinese Academy of Sciences
 - Phone: 010-82544482.
 - Email:luoyaoru2019@ia.ac.cn

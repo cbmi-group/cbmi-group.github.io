@@ -7,7 +7,7 @@
 
 ### Shuhao Zhang
 - Research Assistant.
-- National Laboratory of Pattern Recongition (NLRR)
+- National Laboratory of Pattern Recongition (NLPR)
 - Institute of Automation,Chinese Academy of Sciences
 - Email: z@mail.nankai.edu.cn
 <hr>

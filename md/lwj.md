@@ -7,7 +7,7 @@
 
 ###Wenjing Li
 - Ph.D Associate Assistant.
-- National Laboratory of Pattern Recongition (NLRR)，Institute of Automation,Chinese Academy of Sciences
+- National Laboratory of Pattern Recongition (NLPR)，Institute of Automation,Chinese Academy of Sciences
 - Email: wenjing.li@ia.ac.cn
 <hr>
 
