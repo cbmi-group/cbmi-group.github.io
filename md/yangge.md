@@ -6,7 +6,7 @@
 </div>
 
 ###Ph.D. Professor
-- Director, Computational Biology and Machine Intelligence(CMBI) group, National Laboratory of Pattern Recongition(NLPR), Institute of Automation, Chinese Academy of Sciences
+- Director, Computational Biology and Machine Intelligence(CBMI) group, National Laboratory of Pattern Recongition(NLPR), Institute of Automation, Chinese Academy of Sciences
 - Professor of School of Artificial Intelligence in [University of Chinese Academy of Sciences](https://english.ucas.ac.cn/).
 - Email: ge.yang@ia.ac.cn
 
