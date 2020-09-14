@@ -59,6 +59,7 @@ a_row = load_utf8("row_template.html")
 
 index_body = index_body + a_row.replace("{{INNER}}", a_new + b_new)
 new_index = new_index.replace("{{BODY}}", index_body)
+new_index = new_index.replace("{{COUNT}}", "")
 savefinalhtml("index.html", new_index)
 
 
@@ -71,12 +72,14 @@ pub_content = pub_tem.replace("{{POST_TITLE}}", "Research Projects")
 research_row = load_utf8("a_project_row.html")
 pub_content = pub_content.replace("{{POST_CONTENT}}", publications + research_row.replace("{{INNER}}", a_new.replace('"4u"', '"6u"') + b_new.replace('"4u"', '"6u"')))
 pub = pub.replace("{{BODY}}", pub_content)
+pub = pub.replace("{{COUNT}}", "research.html")
 savefinalhtml("research.html", pub)
 
 # generate people
 pub = index.replace("{{TITLE}}", "Team")
 my_people = load_utf8("md/people_template.html")
 pub = pub.replace("{{BODY}}", my_people)
+pub = pub.replace("{{COUNT}}", "people.html")
 savefinalhtml("people.html", pub)
 
 def generate_a_person(mdpath, pagetitle, htmlpath):
@@ -87,6 +90,8 @@ def generate_a_person(mdpath, pagetitle, htmlpath):
     pub_content = pub_tem.replace("{{POST_TITLE}}", pagetitle)
     pub_content = pub_content.replace("{{POST_CONTENT}}", publications)
     pub = pub.replace("{{BODY}}", pub_content)
+    count = htmlpath.replace("/", "%2F")
+    pub = pub.replace("{{COUNT}}", count)
     savefinalhtml(htmlpath, pub)
 
 person_infos = [
@@ -124,6 +129,7 @@ publications = markdown.markdown(publications)
 pub_content = pub_tem.replace("{{POST_TITLE}}", "Publications")
 pub_content = pub_content.replace("{{POST_CONTENT}}", publications)
 pub = pub.replace("{{BODY}}", pub_content)
+pub = pub.replace("{{COUNT}}", "publications.html")
 savefinalhtml("publications.html", pub)
 
 # generate positions
@@ -134,10 +140,12 @@ publications = markdown.markdown(publications)
 pub_content = pub_tem.replace("{{POST_TITLE}}", "Open Positions")
 pub_content = pub_content.replace("{{POST_CONTENT}}", publications)
 pub = pub.replace("{{BODY}}", pub_content)
+pub = pub.replace("{{COUNT}}", "openpositions.html")
 savefinalhtml("openpositions.html", pub)
 
 # generate contacts
 contacts = index.replace("{{TITLE}}", "Contact Us")
 contact_tem = load_utf8("contact_template.html")
 contact_html = contacts.replace("{{BODY}}", contact_tem)
+contact_html = contact_html.replace("{{COUNT}}", "contact.html")
 savefinalhtml("contact.html", contact_html)
