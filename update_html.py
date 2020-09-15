@@ -42,30 +42,31 @@ news = [
   ["images/feng3-p5-feng-large.gif", "Quality Assessment of Synthetic Fluorescence Microscopy Images for Image Segmentation", "We have developed a method to assess quality of synthetic fluorescence microscopy images and to evaluate their training performance in image segmentation.", "https://ieeexplore.ieee.org/abstract/document/8802971"],
   ["https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.mp4", "Whole-Cell Scale Dynamic Organization of Lysosomes Revealed by Spatial Statistical Analysis", "Our findings reveal whole-cell scale spatial organization of lysosomes and provide insights into how organelle interactions are mediated and regulated across the entire intracellular space.", "https://www.sciencedirect.com/science/article/pii/S221112471830860X", "https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.jpg"]
 ]
-a_news_template = load_utf8("news_template.html")
-a_new = a_news_template.replace("{{IMG_URL}}", news[0][0])
-a_new = a_new.replace("{{RESEARCH_TITLE}}", news[0][1])
-a_new = a_new.replace("{{RESEARCH_BRIEF}}", news[0][2])
-a_new = a_new.replace("{{RESEARCH_LINK}}", news[0][3])
 
-b_news_template = load_utf8("news_template.html")
-b_new = b_news_template.replace("{{IMG_URL}}", news[1][0])
-b_new = b_new.replace("{{RESEARCH_TITLE}}", news[1][1])
-b_new = b_new.replace("{{RESEARCH_BRIEF}}", news[1][2])
-b_new = b_new.replace("{{RESEARCH_LINK}}", news[1][3])
-
-c_video_template = load_utf8("video_news.html")
-c_new = c_video_template.replace("{{VIDEO_URL}}", news[2][0])
-c_new = c_new.replace("{{RESEARCH_TITLE}}", news[2][1])
-c_new = c_new.replace("{{RESEARCH_BRIEF}}", news[2][2])
-c_new = c_new.replace("{{RESEARCH_LINK}}", news[2][3])
-c_new = c_new.replace("{{VIDEO_IMG}}", news[2][4])
+news_content = []
+for a_new in news:
+  if len(a_new) == 4: # news_template
+    a_news_template = load_utf8("news_template.html")
+    t_new = a_news_template.replace("{{IMG_URL}}", a_new[0])
+    t_new = t_new.replace("{{RESEARCH_TITLE}}", a_new[1])
+    t_new = t_new.replace("{{RESEARCH_BRIEF}}", a_new[2])
+    t_new = t_new.replace("{{RESEARCH_LINK}}", a_new[3])
+    news_content.append(t_new)
+  elif len(a_new) == 5: # video_news
+    t_video_template = load_utf8("video_news.html")
+    t_new = t_video_template.replace("{{VIDEO_URL}}", a_new[0])
+    t_new = t_new.replace("{{RESEARCH_TITLE}}", a_new[1])
+    t_new = t_new.replace("{{RESEARCH_BRIEF}}", a_new[2])
+    t_new = t_new.replace("{{RESEARCH_LINK}}", a_new[3])
+    t_new = t_new.replace("{{VIDEO_IMG}}", a_new[4])
+    news_content.append(t_new)
+  else:
+    pass
 
 
 a_row = load_utf8("row_template.html")
 
-index_body = index_body + a_row.replace("{{INNER}}", a_new + b_new + c_new)
-# index_body = index_body + b_row.replace("{{INNER}}", c_new)
+index_body = index_body + a_row.replace("{{INNER}}", news_content[0] + news_content[1])
 new_index = new_index.replace("{{BODY}}", index_body)
 new_index = new_index.replace("{{COUNT}}", "")
 savefinalhtml("index.html", new_index)
@@ -78,7 +79,12 @@ publications = load_utf8("md/research.md")
 publications = markdown.markdown(publications)
 pub_content = pub_tem.replace("{{POST_TITLE}}", "Research Projects")
 research_row = load_utf8("a_project_row.html")
-pub_content = pub_content.replace("{{POST_CONTENT}}", publications + research_row.replace("{{INNER}}", a_new.replace('"4u"', '"6u"') + b_new.replace('"4u"', '"6u"') + c_new.replace('"4u"', '"6u"')))
+
+research_content = ""
+for a_content in news_content:
+  research_content = research_content + a_content.replace('"4u"', '"6u"')
+
+pub_content = pub_content.replace("{{POST_CONTENT}}", publications + research_row.replace("{{INNER}}", research_content))
 pub = pub.replace("{{BODY}}", pub_content)
 pub = pub.replace("{{COUNT}}", "research.html")
 savefinalhtml("research.html", pub)
