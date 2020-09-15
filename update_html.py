@@ -38,26 +38,34 @@ index_body = ""
 index_body = index_body + banner + u8u4
 
 news = [
+  ["images/er-segmentation.png", "Deep Learning-Based Segmentation of Biological Networks in Fluorescence Microscopy", "We developed a deep learning-based pipeline to study the effects of image pre-processing, loss functions and model architectures for accurate segmentation of biological networks in FLMI.", "./projects/er-segmentation.html"],
   ["images/feng3-p5-feng-large.gif", "Quality Assessment of Synthetic Fluorescence Microscopy Images for Image Segmentation", "We have developed a method to assess quality of synthetic fluorescence microscopy images and to evaluate their training performance in image segmentation.", "https://ieeexplore.ieee.org/abstract/document/8802971"],
   ["https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.mp4", "Whole-Cell Scale Dynamic Organization of Lysosomes Revealed by Spatial Statistical Analysis", "Our findings reveal whole-cell scale spatial organization of lysosomes and provide insights into how organelle interactions are mediated and regulated across the entire intracellular space.", "https://www.sciencedirect.com/science/article/pii/S221112471830860X", "https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.jpg"]
 ]
-news_template = load_utf8("news_template.html")
-a_new = news_template.replace("{{IMG_URL}}", news[0][0])
+a_news_template = load_utf8("news_template.html")
+a_new = a_news_template.replace("{{IMG_URL}}", news[0][0])
 a_new = a_new.replace("{{RESEARCH_TITLE}}", news[0][1])
 a_new = a_new.replace("{{RESEARCH_BRIEF}}", news[0][2])
 a_new = a_new.replace("{{RESEARCH_LINK}}", news[0][3])
 
-video_template = load_utf8("video_news.html")
-b_new = video_template.replace("{{VIDEO_URL}}", news[1][0])
+b_news_template = load_utf8("news_template.html")
+b_new = b_news_template.replace("{{IMG_URL}}", news[1][0])
 b_new = b_new.replace("{{RESEARCH_TITLE}}", news[1][1])
 b_new = b_new.replace("{{RESEARCH_BRIEF}}", news[1][2])
 b_new = b_new.replace("{{RESEARCH_LINK}}", news[1][3])
-b_new = b_new.replace("{{VIDEO_IMG}}", news[1][4])
+
+c_video_template = load_utf8("video_news.html")
+c_new = c_video_template.replace("{{VIDEO_URL}}", news[2][0])
+c_new = c_new.replace("{{RESEARCH_TITLE}}", news[2][1])
+c_new = c_new.replace("{{RESEARCH_BRIEF}}", news[2][2])
+c_new = c_new.replace("{{RESEARCH_LINK}}", news[2][3])
+c_new = c_new.replace("{{VIDEO_IMG}}", news[2][4])
 
 
 a_row = load_utf8("row_template.html")
 
-index_body = index_body + a_row.replace("{{INNER}}", a_new + b_new)
+index_body = index_body + a_row.replace("{{INNER}}", a_new + b_new + c_new)
+# index_body = index_body + b_row.replace("{{INNER}}", c_new)
 new_index = new_index.replace("{{BODY}}", index_body)
 new_index = new_index.replace("{{COUNT}}", "")
 savefinalhtml("index.html", new_index)
@@ -70,7 +78,7 @@ publications = load_utf8("md/research.md")
 publications = markdown.markdown(publications)
 pub_content = pub_tem.replace("{{POST_TITLE}}", "Research Projects")
 research_row = load_utf8("a_project_row.html")
-pub_content = pub_content.replace("{{POST_CONTENT}}", publications + research_row.replace("{{INNER}}", a_new.replace('"4u"', '"6u"') + b_new.replace('"4u"', '"6u"')))
+pub_content = pub_content.replace("{{POST_CONTENT}}", publications + research_row.replace("{{INNER}}", a_new.replace('"4u"', '"6u"') + b_new.replace('"4u"', '"6u"') + c_new.replace('"4u"', '"6u"')))
 pub = pub.replace("{{BODY}}", pub_content)
 pub = pub.replace("{{COUNT}}", "research.html")
 savefinalhtml("research.html", pub)
@@ -149,3 +157,23 @@ contact_tem = load_utf8("contact_template.html")
 contact_html = contacts.replace("{{BODY}}", contact_tem)
 contact_html = contact_html.replace("{{COUNT}}", "contact.html")
 savefinalhtml("contact.html", contact_html)
+
+project_tem = load_utf8("projects/project_template.html")
+def generate_a_project(mdpath, pagetitle, htmlpath):
+    pub = project_tem.replace("{{TITLE}}", pagetitle)
+    article_tem = load_utf8("article_template.html")
+    project_md = load_utf8(mdpath)
+    project_content = markdown.markdown(project_md, extensions=['codehilite', 'fenced_code', 'extra'])
+    article_content = article_tem.replace("{{POST_CONTENT}}", project_content)
+    pub = pub.replace("{{BODY}}", article_content)
+    count = htmlpath.replace("/", "%2F")
+    pub = pub.replace("{{COUNT}}", count)
+    savefinalhtml(htmlpath, pub)
+# generate projects
+projects_info = [
+  # markdown_path, title, html_path
+  ["md/er-segmentation.md", "ER Segmentation", "projects/er-segmentation.html"]
+]
+
+for a_project in projects_info:
+    generate_a_project(a_project[0], a_project[1], a_project[2])
