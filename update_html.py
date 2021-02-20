@@ -38,9 +38,12 @@ index_body = ""
 index_body = index_body + banner + u8u4
 
 news = [
+  ['images/GNMD.png', 'Blind Denoising of Fluorescence Microscopy Images Using GAN-Based Global Noise Modeling', 'We have developed a blind denoiser that uses one GAN to model image noise globally and another GAN to drastically reduce background noise.', 'https://biomedicalimaging.org/2021/'],
+  ['images/wsbm.jpg', 'Dynamic Organization of Intracellular Organelle Networks', 'We have developed a method to assess quality of synthetic fluorescence microscopy images and to evaluate their training performance in image segmentation.', 'https://onlinelibrary.wiley.com/doi/10.1002/wsbm.1505'],
+  ["https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.mp4", "Whole-Cell Scale Dynamic Organization of Lysosomes Revealed by Spatial Statistical Analysis", "Our findings reveal whole-cell scale spatial organization of lysosomes and provide insights into how organelle interactions are mediated and regulated across the entire intracellular space.", "https://www.sciencedirect.com/science/article/pii/S221112471830860X",
+   "https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.jpg"],
   ["images/er-segmentation.png", "Deep Learning-Based Segmentation of Biological Networks in Fluorescence Microscopy", "We developed a deep learning-based pipeline to study the effects of image pre-processing, loss functions and model architectures for accurate segmentation of biological networks in FLMI.", "./projects/er-segmentation.html"],
   ["images/feng3-p5-feng-large.gif", "Quality Assessment of Synthetic Fluorescence Microscopy Images for Image Segmentation", "We have developed a method to assess quality of synthetic fluorescence microscopy images and to evaluate their training performance in image segmentation.", "https://ieeexplore.ieee.org/abstract/document/8802971"],
-  ["https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.mp4", "Whole-Cell Scale Dynamic Organization of Lysosomes Revealed by Spatial Statistical Analysis", "Our findings reveal whole-cell scale spatial organization of lysosomes and provide insights into how organelle interactions are mediated and regulated across the entire intracellular space.", "https://www.sciencedirect.com/science/article/pii/S221112471830860X", "https://ars.els-cdn.com/content/image/1-s2.0-S221112471830860X-mmc6.jpg"]
 ]
 
 news_content = []
