@@ -68,8 +68,9 @@ for a_new in news:
 
 
 a_row = load_utf8("row_template.html")
+more_research_row = load_utf8("more_research_row.html")
 
-index_body = index_body + a_row.replace("{{INNER}}", news_content[0] + news_content[1])
+index_body = index_body + a_row.replace("{{INNER}}", news_content[0] + news_content[1]) + more_research_row
 new_index = new_index.replace("{{BODY}}", index_body)
 new_index = new_index.replace("{{COUNT}}", "")
 savefinalhtml("index.html", new_index)
