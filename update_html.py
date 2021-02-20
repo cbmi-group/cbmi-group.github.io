@@ -119,7 +119,6 @@ person_infos = [
   ["md/zsh.md",    "Shuhao Zhang",  "people/shuhaozhang.html"],
   ["md/lyr.md",    "Yaoru Luo",     "people/yaoruluo.html"],
   ["md/zlq.md",    "Liqun Zhong",   "people/liqunzhong.html"],
-  ["md/yb.md",     "Bo You",        "people/boyou.html"],
   ["md/xyp.md",    "Yunpeng Xiao",  "people/yunpengxiao.html"],
   ["md/wsy.md",    "Shiyu Wu",      "people/shiyuwu.html"],
   ["md/zyt.md",    "Yating Zhou",   "people/yatingzhou.html"],
